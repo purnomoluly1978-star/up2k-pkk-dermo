@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UP2K PKK Kelurahan Dermo - Kecamatan Mojoroto, Kota Kediri</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root {
+  --bg: #fbf7f0; --card: #fff; --ink: #23322b; --mute: #5f6f66; --brand: #1f7a5a; --brand2: #e9a23b; --soft: #e6f2ec; --line: #e4ddd0;
+  box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121a16; --card: #1b2620; --ink: #eef3ef; --mute: #a3b3a9; --brand: #4fc294; --brand2: #f0b85a; --soft: #223a2f; --line: #2c3b33; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121a16; --card: #1b2620; --ink: #eef3ef; --mute: #a3b3a9; --brand: #4fc294; --brand2: #f0b85a; --soft: #223a2f; --line: #2c3b33; color-scheme: dark;
+}
+html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 18px; }
+header { background: var(--brand); color: #fff; padding: 50px 0 40px; border-radius: 0 0 32px 32px; position: relative; overflow: hidden; }
+header::after { content: ""; position: absolute; right: -30px; bottom: -40px; width: 160px; height: 160px; background: rgba(255,255,255,0.08); border-radius: 50%; pointer-events: none; }
+.badge { display: inline-block; background: rgba(255,255,255,.18); padding: 4px 12px; border-radius: 99px; font-size: 13px; letter-spacing: .04em; }
+h1 { font-size: 28px; line-height: 1.25; margin: 12px 0 8px; font-weight: 800; }
+header p { margin: 0 0 24px; opacity: .95; font-size: 15px; }
+.btn { display: inline-block; background: var(--brand2); color: #2a1d05; font-weight: 700; text-decoration: none; padding: 12px 24px; border-radius: 99px; transition: transform 0.1s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.btn:active { transform: scale(0.97); }
+.btn.alt { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.6); margin-left: 6px; box-shadow: none; }
+nav { position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); border-bottom: 1px solid var(--line); z-index: 50; }
+nav .wrap { display: flex; gap: 8px; overflow-x: auto; padding: 12px 18px; scrollbar-width: none; }
+nav .wrap::-webkit-scrollbar { display: none; }
+nav a { white-space: nowrap; text-decoration: none; color: var(--ink); background: var(--soft); padding: 6px 14px; border-radius: 99px; font-size: 14px; font-weight: 500; transition: background 0.2s; }
+nav a:hover { background: var(--brand); color: #fff; }
+section { padding: 40px 0 10px; }
+h2 { font-size: 23px; margin: 0 0 6px; color: var(--brand); font-weight: 700; }
+.lead { color: var(--mute); margin: 0 0 20px; font-size: 15px; }
+.grid { display: grid; gap: 14px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+.card h3 { margin: 0 0 4px; font-size: 17px; font-weight: 600; }
+.card p { margin: 0; color: var(--mute); font-size: 15px; }
+.ico { font-size: 28px; margin-bottom: 8px; }
+.two { grid-template-columns: 1fr 1fr; }
+.prod { text-align: left; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 0; }
+.prod img { width: 100%; height: 160px; object-fit: cover; border-top-left-radius: 20px; border-top-right-radius: 20px; }
+.prod-body { padding: 16px; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
+.prod-price { font-weight: 700; color: var(--brand); font-size: 16px; margin: 8px 0; }
+.steps { counter-reset: s; list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.steps li { counter-increment: s; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px 14px 14px 56px; position: relative; }
+.steps li::before { content: counter(s); position: absolute; left: 14px; top: 14px; width: 30px; height: 30px; border-radius: 50%; background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 14px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.gallery-item { background: var(--card); border-radius: 16px; overflow: hidden; border: 1px solid var(--line); text-align: center; padding: 12px; }
+.gallery-item img { width: 100%; height: 130px; object-fit: cover; border-radius: 12px; margin-bottom: 8px; }
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; color: var(--ink); }
+.form-control { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); font-size: 15px; outline: none; }
+.form-control:focus { border-color: var(--brand); ring: 2px solid var(--brand); }
+.note { font-size: 13px; color: var(--mute); margin-top: 10px; }
+footer { margin-top: 50px; padding: 30px 0 40px; text-align: center; color: var(--mute); font-size: 14px; border-top: 1px solid var(--line); }
+.wa-float { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); background: #25d366; color: #fff; text-decoration: none; font-weight: 700; padding: 12px 20px; border-radius: 99px; box-shadow: 0 4px 16px rgba(0,0,0,0.25); z-index: 99; display: flex; align-items: center; gap: 8px; font-size: 15px; }
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 100; place-items: center; padding: 16px; backdrop-filter: blur(4px); }
+.modal.active { display: grid; }
+.modal-content { background: var(--card); border-radius: 24px; width: 100%; max-width: 480px; padding: 24px; box-shadow: 0 12px 30px rgba(0,0,0,0.25); position: relative; max-height: 90vh; overflow-y: auto; }
+@media(max-width: 540px) { .two { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: 1fr; } }
+
+/* === Penyempurnaan tampilan UP2K PKK Dermo: lapisan tambahan, fitur lama tetap dipertahankan === */
+*, *::before, *::after { box-sizing: border-box; }
+body { min-width: 320px; overflow-wrap: break-word; }
+img, iframe { max-width: 100%; }
+a, button, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--brand2); outline-offset: 3px;
+}
+.wrap { width: 100%; }
+header {
+  padding: clamp(34px, 7vw, 58px) 0 clamp(30px, 6vw, 46px);
+  background: linear-gradient(135deg, var(--brand) 0%, #165b45 100%);
+}
+header::after { width: clamp(120px, 28vw, 220px); height: clamp(120px, 28vw, 220px); }
+header .wrap { position: relative; z-index: 1; }
+header h1 { max-width: 650px; font-size: clamp(27px, 5vw, 40px); letter-spacing: -0.025em; }
+header p { max-width: 590px; line-height: 1.75; }
+.badge { line-height: 1.5; }
+.btn { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; text-align: center; }
+.btn:hover { filter: brightness(1.04); }
+nav { backdrop-filter: blur(12px); }
+nav .wrap { max-width: 756px; }
+nav a { min-height: 38px; display: inline-flex; align-items: center; }
+nav a:focus-visible { outline-offset: 1px; }
+section { scroll-margin-top: 78px; padding-top: clamp(30px, 5vw, 46px); }
+h2 { line-height: 1.3; letter-spacing: -0.015em; }
+.lead { line-height: 1.75; }
+.card { box-shadow: 0 5px 20px rgba(25, 45, 35, 0.045); transition: transform .18s ease, box-shadow .18s ease; }
+.card h3 { line-height: 1.45; }
+.prod { height: 100%; }
+.prod img { display: block; background: var(--soft); }
+.prod-body { gap: 12px; }
+.prod-price { line-height: 1.45; }
+button { cursor: pointer; font: inherit; }
+button:hover { filter: brightness(1.04); }
+.form-control { min-height: 48px; }
+textarea.form-control { min-height: 96px; resize: vertical; }
+.form-control:focus { box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 18%, transparent); }
+.form-group label { line-height: 1.45; }
+.steps li, .gallery-item { line-height: 1.6; }
+.wa-float { min-height: 48px; padding: 12px 18px; }
+footer { line-height: 1.8; }
+@media (min-width: 700px) {
+  .wrap { padding-left: 24px; padding-right: 24px; }
+  .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card:hover { box-shadow: 0 10px 28px rgba(25, 45, 35, 0.08); }
+}
+@media (max-width: 540px) {
+  .wrap { padding-left: 16px; padding-right: 16px; }
+  header { border-radius: 0 0 24px 24px; }
+  header h1 { font-size: clamp(26px, 7.2vw, 32px); }
+  header p { font-size: 14px; }
+  .btn { width: 100%; margin: 0 0 10px; padding: 12px 16px; }
+  .btn.alt { margin-left: 0; }
+  nav .wrap { padding: 10px 16px; }
+  .two, .gallery-grid { grid-template-columns: 1fr; }
+  .card { padding: 16px; border-radius: 17px; }
+  .prod { padding: 0; }
+  .prod img { height: 190px; }
+  .prod-body { padding: 16px; }
+  .modal-content { padding: 20px; border-radius: 20px; }
+  .wa-float { right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); padding: 11px 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="badge">PKK Kelurahan Dermo, Kec. Mojoroto, Kota Kediri</span>
+    <h1>UP2K: Keluarga Mandiri, Ekonomi Sejahtera</h1>
+    <p>Upaya Peningkatan Pendapatan Keluarga. Wadah produktif warga Dermo untuk berkarya, berwirausaha, dan tumbuh bersama.</p>
+    <a class="btn" href="#produk">Katalog UMKM</a>
+    <a class="btn alt" href="#pendaftaran">Daftar Anggota/Produk</a>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#tentang">Tentang</a>
+    <a href="#kegiatan">Kegiatan</a>
+    <a href="#produk">Produk Unggulan</a>
+    <a href="#pendaftaran">Pendaftaran</a>
+    <a href="#agenda">Jadwal Pelatihan</a>
+    <a href="#tips">Tips UMKM</a>
+    <a href="#kontak">Lokasi & Kontak</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <!-- TENTANG -->
+  <section id="tentang">
+    <h2>Tentang UP2K Dermo</h2>
+    <p class="lead">Program pemberdayaan ekonomi kerakyatan berbasis keluarga di Kelurahan Dermo, Kota Kediri.</p>
+    <div class="card">
+      <p>Kelompok UP2K (Usaha Peningkatan Pendapatan Keluarga) PKK Kelurahan Dermo, Kecamatan Mojoroto, Kota Kediri, berfokus pada pembinaan ibu rumah tangga dan pelaku UMKM lokal. Melalui pelatihan keterampilan, literasi keuangan, dan perluasan pasar digital, kami berkomitmen mewujudkan kemandirian ekonomi keluarga yang kokoh dan berkelanjutan.</p>
+    </div>
+  </section>
+
+  <!-- KEGIATAN -->
+  <section id="kegiatan">
+    <h2>Kegiatan Rutin PKK Dermo</h2>
+    <p class="lead">Program pembinaan berkala untuk meningkatkan kualitas dan daya saing warga.</p>
+    <div class="grid two">
+      <div class="card">
+        <div class="ico">📚</div>
+        <h3>Pelatihan Keterampilan</h3>
+        <p>Pelatihan pengolahan pangan higienis, pengemasan modern, dan kerajinan khas bernilai jual tinggi.</p>
+      </div>
+      <div class="card">
+        <div class="ico">💰</div>
+        <h3>Literasi Keuangan</h3>
+        <p>Bimbingan pembukuan sederhana, pengelolaan modal usaha, serta tips menabung cerdas untuk keluarga.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🛍️</div>
+        <h3>Bazar & Pameran</h3>
+        <p>Fasilitasi pemasaran offline di tingkat kelurahan, kecamatan Mojoroto, hingga event Kota Kediri.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🤝</div>
+        <h3>Pendampingan Legalitas</h3>
+        <p>Bantuan fasilitasi perizinan usaha seperti NIB (Nomor Induk Berusaha), PIRT, dan sertifikasi Halal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KATALOG PRODUK UNGGULAN -->
+  <section id="produk">
+    <h2>Katalog Produk Unggulan UP2K</h2>
+    <p class="lead">Dukung UMKM warga lokal Dermo dengan memesan langsung karya terbaik kami.</p>
+    <div class="grid two">
+      <!-- Produk 1 -->
+      <div class="card prod">
+        <img src="https://placehold.co/500x300/1f7a5a/ffffff?text=Kue+Kering+Nastar" alt="Kue Kering Nastar & Kastengel" onerror="this.src='https://placehold.co/500x300/1f7a5a/ffffff?text=Kue+Kering'">
+        <div class="prod-body">
+          <div>
+            <span class="text-xs bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full font-medium">Terlaris 🍪</span>
+            <h3 class="mt-2">Kue Kering Nastar & Kastengel Dermo</h3>
+            <p class="text-xs text-[var(--mute)] mt-1">Dibuat dari mentega pilihan & keju berkualitas tanpa bahan pengawet.</p>
+            <div class="prod-price">Rp 45.000 / toples</div>
+          </div>
+          <button onclick="pesanProduk('Kue Kering Nastar & Kastengel Dermo', 'Rp 45.000')" class="w-full mt-3 bg-[var(--brand)] text-white py-2 px-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:opacity-95 transition">
+            🛒 Pesan via WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <!-- Produk 2 -->
+      <div class="card prod">
+        <img src="https://placehold.co/500x300/e9a23b/ffffff?text=Frozen+Food+Dimsum" alt="Olahan Frozen Food" onerror="this.src='https://placehold.co/500x300/e9a23b/ffffff?text=Frozen+Food'">
+        <div class="prod-body">
+          <div>
+            <span class="text-xs bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full font-medium">Siap Saji 🥟</span>
+            <h3 class="mt-2">Olahan Frozen Food (Dimsum & Lumpia)</h3>
+            <p class="text-xs text-[var(--mute)] mt-1">Praktis tinggal kukus atau goreng di rumah. Isi 10 pcs lengkap saus.</p>
+            <div class="prod-price">Rp 25.000 / pack</div>
+          </div>
+          <button onclick="pesanProduk('Olahan Frozen Food (Dimsum & Lumpia)', 'Rp 25.000')" class="w-full mt-3 bg-[var(--brand)] text-white py-2 px-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:opacity-95 transition">
+            🛒 Pesan via WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <!-- Produk 3 -->
+      <div class="card prod">
+        <img src="https://placehold.co/500x300/23322b/ffffff?text=Kerajinan+Lokal" alt="Kerajinan Tenun & Lokal Kediri" onerror="this.src='https://placehold.co/500x300/23322b/ffffff?text=Kerajinan'">
+        <div class="prod-body">
+          <div>
+            <span class="text-xs bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full font-medium">Handmade 🧺</span>
+            <h3 class="mt-2">Kerajinan Tenun & Tas Lokal Kediri</h3>
+            <p class="text-xs text-[var(--mute)] mt-1">Karya kreatif khas bernuansa lokal dengan kualitas jahitan rapi.</p>
+            <div class="prod-price">Rp 50.000 - Rp 150.000</div>
+          </div>
+          <button onclick="pesanProduk('Kerajinan Tenun & Tas Lokal Kediri', 'Variasi Harga')" class="w-full mt-3 bg-[var(--brand)] text-white py-2 px-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:opacity-95 transition">
+            🛒 Pesan via WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <!-- Produk 4 -->
+      <div class="card prod">
+        <img src="https://placehold.co/500x300/4fc294/ffffff?text=Minuman+Herbal" alt="Minuman Herbal Tradisional" onerror="this.src='https://placehold.co/500x300/4fc294/ffffff?text=Herbal'">
+        <div class="prod-body">
+          <div>
+            <span class="text-xs bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 px-2 py-0.5 rounded-full font-medium">Herbal Sehat 🥤</span>
+            <h3 class="mt-2">Minuman Herbal (Jahe Merah & Kunyit Asam)</h3>
+            <p class="text-xs text-[var(--mute)] mt-1">Serbuk instan murni berkhasiat menjaga kebugaran tubuh sehari-hari.</p>
+            <div class="prod-price">Rp 20.000 / botol</div>
+          </div>
+          <button onclick="pesanProduk('Minuman Herbal (Jahe Merah & Kunyit Asam)', 'Rp 20.000')" class="w-full mt-3 bg-[var(--brand)] text-white py-2 px-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:opacity-95 transition">
+            🛒 Pesan via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+    <p class="note">Ingin produk usaha Anda masuk dalam katalog ini? Daftarkan melalui formulir di bawah.</p>
+  </section>
+
+  <!-- FORMULIR PENDAFTARAN WARGA/UMKM -->
+  <section id="pendaftaran">
+    <h2>Formulir Pendaftaran Warga / UMKM</h2>
+    <p class="lead">Ingin bergabung dengan kelompok UP2K atau mendaftarkan produk usaha Anda? Isi formulir di bawah ini.</p>
+    <div class="card">
+      <form id="regForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="namaLengkap">Nama Lengkap</label>
+          <input type="text" id="namaLengkap" class="form-control" placeholder="Contoh: Ibu Siti Aminah" required>
+        </div>
+        <div class="form-group">
+          <label for="noWhatsApp">Nomor WhatsApp Aktif</label>
+          <input type="tel" id="noWhatsApp" class="form-control" placeholder="Contoh: 081234567890" required>
+        </div>
+        <div class="form-group">
+          <label for="rtRw">RT / RW & Alamat di Dermo</label>
+          <input type="text" id="rtRw" class="form-control" placeholder="Contoh: RT 02 / RW 03 Dermo, Mojoroto" required>
+        </div>
+        <div class="form-group">
+          <label for="jenisPendaftaran">Keperluan Pendaftaran</label>
+          <select id="jenisPendaftaran" class="form-control" required>
+            <option value="">-- Pilih Keperluan --</option>
+            <option value="Gabung Anggota Baru UP2K">Bergabung sebagai Anggota Baru UP2K</option>
+            <option value="Daftar & Promosi Produk UMKM">Mendaftarkan & Mempromosikan Produk Usaha</option>
+            <option value="Keduanya (Anggota & Produk)">Gabung Anggota & Daftarkan Produk</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="detailUsaha">Nama Usaha & Jenis Produk (Jika ada)</label>
+          <textarea id="detailUsaha" class="form-control" rows="3" placeholder="Contoh: Kuliner Kue Kering / Kerajinan Lokal"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-[var(--brand)] text-white py-3 px-4 rounded-xl font-bold hover:opacity-95 transition shadow-md">
+          📤 Kirim Pendaftaran via WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- JADWAL KEGIATAN & PELATIHAN -->
+  <section id="agenda">
+    <h2>Jadwal Kegiatan & Pelatihan</h2>
+    <p class="lead">Catat agenda pembinaan dan pelatihan UP2K PKK Dermo bulan ini.</p>
+    <div class="grid">
+      <div class="card border-l-4 border-emerald-600">
+        <span class="text-xs font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-950 px-2.5 py-1 rounded-full">Sabtu, 28 Nov 2026 • 09.00 WIB</span>
+        <h3 class="mt-2">Workshop Digital Marketing & Foto Produk Modal HP</h3>
+        <p class="mt-1">Belajar teknik dasar memotret produk makanan & kerajinan agar menarik pembeli di WhatsApp & media sosial.</p>
+        <p class="text-xs text-[var(--mute)] mt-2">📍 Lokasi: Pendopo Kantor Kelurahan Dermo, Mojoroto</p>
+      </div>
+      <div class="card border-l-4 border-amber-500">
+        <span class="text-xs font-bold text-amber-600 bg-amber-50 dark:bg-amber-950 px-2.5 py-1 rounded-full">Jumat, 4 Des 2026 • 15.30 WIB</span>
+        <h3 class="mt-2">Pertemuan Rutin & Arisan Kelompok UP2K</h3>
+        <p class="mt-1">Evaluasi bulanan kelompok usaha dan koordinasi persiapan bazar akhir tahun Kota Kediri.</p>
+        <p class="text-xs text-[var(--mute)] mt-2">📍 Lokasi: Balai Warga RW 03 Dermo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPS UMKM & KEUANGAN -->
+  <section id="tips">
+    <h2>Rubrik Tips UMKM & Keuangan Rumah Tangga</h2>
+    <p class="lead">Panduan praktis agar usaha rumahan dan keuangan keluarga semakin sehat.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>💡 Tips Foto Produk Menarik Hanya dengan HP</h3>
+        <p class="mt-1">Manfaatkan cahaya matahari pagi di dekat jendela. Bersihkan lensa kamera HP Anda, gunakan latar belakang bersih (seperti taplak putih atau dinding polos), dan ambil sudut dari depan atau sedikit miring agar produk tampak menggugah selera.</p>
+      </div>
+      <div class="card">
+        <h3>📝 Pentingnya Memisahkan Keuangan Usaha</h3>
+        <p class="mt-1">Jangan mencampur uang hasil penjualan dengan uang belanja rumah tangga. Selalu sisihkan modal awal dan catat setiap pemasukan serta pengeluaran sekecil apapun dalam buku catatan harian agar usaha terpantau sehat.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERI FOTO -->
+  <section id="galeri">
+    <h2>Galeri Kegiatan Warga</h2>
+    <p class="lead">Dokumentasi kebersamaan dan karya warga Kelurahan Dermo.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://placehold.co/400x300/1f7a5a/ffffff?text=Pelatihan+Kuliner" alt="Pelatihan Kuliner" onerror="this.src='https://placehold.co/400x300/1f7a5a/ffffff?text=Dokumentasi'">
+        <p class="text-xs font-medium">Pelatihan Pembuatan Kue</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://placehold.co/400x300/e9a23b/ffffff?text=Bazar+UMKM" alt="Bazar UMKM Kelurahan" onerror="this.src='https://placehold.co/400x300/e9a23b/ffffff?text=Dokumentasi'">
+        <p class="text-xs font-medium">Pameran Bazar Kelurahan</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://placehold.co/400x300/23322b/ffffff?text=Kerajinan+Tangan" alt="Kerajinan Tangan" onerror="this.src='https://placehold.co/400x300/23322b/ffffff?text=Dokumentasi'">
+        <p class="text-xs font-medium">Kerajinan Lokal Kediri</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://placehold.co/400x300/4fc294/ffffff?text=Pertemuan+Rutin" alt="Pertemuan Kelompok" onerror="this.src='https://placehold.co/400x300/4fc294/ffffff?text=Dokumentasi'">
+        <p class="text-xs font-medium">Pertemuan Rutin Bulanan</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOKASI & KONTAK -->
+  <section id="kontak">
+    <h2>Lokasi & Kontak Sekretariat</h2>
+    <p class="lead">Kunjungi kantor kelurahan atau hubungi pengurus kami.</p>
+    <div class="card">
+      <p><b>Sekretariat PKK Kelurahan Dermo</b><br>
+      Kantor Kelurahan Dermo, Kecamatan Mojoroto, Kota Kediri, Jawa Timur<br><br>
+      📞 WhatsApp Sekretariat: <a href="https://wa.me/6285648000000?text=Halo%20Sekretariat%20UP2K%20PKK%20Dermo" class="text-[var(--brand)] font-bold underline">0856-4800-0000</a> (Ibu Siti Aminah)<br>
+      📸 Instagram: <a href="https://instagram.com/up2k.dermo" target="_blank" class="text-[var(--brand)] font-bold underline">@up2k.dermo</a></p>
+    </div>
+
+    <!-- Peta Lokasi Google Maps Embed Kelurahan Dermo, Mojoroto, Kediri -->
+    <div class="card mt-4 overflow-hidden p-0">
+      <div style="width: 100%; height: 260px; background: #e4ddd0;">
+        <iframe 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.690895311029!2d111.9905!3d-7.8123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7856e8790119e9%3A0x6b4ef8d613e56a6!2sKelurahan%20Dermo%2C%20Kec.%20Mojoroto%2C%20Kota%20Kediri%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1650000000000!5m2!1sid!2sid"
+          title="Peta Kantor Kelurahan Dermo Mojoroto Kediri">
+        </iframe>
+      </div>
+      <div class="p-4 bg-[var(--card)]">
+        <p class="text-xs text-[var(--mute)]">Titik lokasi Kantor Kelurahan Dermo, Kecamatan Mojoroto, Kota Kediri, Jawa Timur.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    © 2026 UP2K PKK Kelurahan Dermo, Kecamatan Mojoroto, Kota Kediri<br>Dibuat dengan semangat gotong royong dan kemandirian warga 💚
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a class="wa-float" href="https://wa.me/6285648000000?text=Halo%20UP2K%20PKK%20Dermo,%20saya%20ingin%20bertanya%20mengenai%20program%20dan%20produk." target="_blank">
+  <span>💬</span> Hubungi Kami
+</a>
+
+<!-- Modal Konfirmasi Pesanan -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <h3 class="text-xl font-bold text-[var(--brand)] mb-2">Pesan Produk UMKM</h3>
+    <p id="modalProductName" class="text-[var(--ink)] font-medium mb-3"></p>
+    <p class="text-sm text-[var(--mute)] mb-4">Anda akan terhubung langsung ke WhatsApp pengurus/produsen UP2K Dermo untuk konfirmasi ketersediaan dan pengiriman.</p>
+    <div class="flex gap-3">
+      <button onclick="tutupModal()" class="flex-1 bg-[var(--soft)] text-[var(--ink)] py-2.5 rounded-xl font-medium">Batal</button>
+      <a id="modalWhatsAppLink" href="#" target="_blank" class="flex-1 bg-emerald-600 text-white text-center py-2.5 rounded-xl font-bold flex items-center justify-center gap-2">Lanjutkan ke WA</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function pesanProduk(namaProduk, harga) {
+    const modal = document.getElementById('orderModal');
+    const nameEl = document.getElementById('modalProductName');
+    const linkEl = document.getElementById('modalWhatsAppLink');
+    
+    nameEl.textContent = `Produk: ${namaProduk} (${harga})`;
+    
+    const pesanText = encodeURIComponent(`Halo, saya ingin memesan produk "${namaProduk}" (${harga}) dari katalog UP2K PKK Kelurahan Dermo, Mojoroto, Kota Kediri. Mohon informasi ketersediaan dan cara pengirimannya.`);
+    linkEl.href = `https://wa.me/6285648000000?text=${pesanText}`;
+    
+    modal.classList.add('active');
+  }
+
+  function tutupModal() {
+    const modal = document.getElementById('orderModal');
+    modal.classList.remove('active');
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    const nama = document.getElementById('namaLengkap').value;
+    const wa = document.getElementById('noWhatsApp').value;
+    const alamat = document.getElementById('rtRw').value;
+    const keperluan = document.getElementById('jenisPendaftaran').value;
+    const usaha = document.getElementById('detailUsaha').value || 'Tidak ada keterangan khusus';
+
+    const text = encodeURIComponent(`Halo Sekretariat UP2K PKK Dermo Mojoroto Kediri, saya ingin mendaftar:\n\n*Nama:* ${nama}\n*No. WA:* ${wa}\n*Alamat:* ${alamat}\n*Keperluan:* ${keperluan}\n*Detail Usaha/Produk:* ${usaha}\n\nMohon petunjuk selanjutnya. Terima kasih.`);
+    
+    window.open(`https://wa.me/6285648000000?text=${text}`, '_blank');
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById('orderModal');
+    if (event.target == modal) {
+      tutupModal();
+    }
+  }
+</script>
+
+</body>
+</html>
+```
+eof
